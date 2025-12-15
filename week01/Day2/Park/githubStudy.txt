@@ -1,0 +1,39 @@
+git config --global user.email "이메일"
+git config --global user.name "이름"
+
+reporitory 생성 방법
+로컬에서 디렉토리 지정 이후
+git init
+
+디렉토리 지정 이후
+git remote add origin 주소 : 로컬 저장소를 원격 저장소와 연결하겠다는 명령어
+
+git clone 주소 : 원격 저장소 정보를 복사해오겠다.
+
+git add .
+. => 전부 다 라는 뜻
+git add 파일명
+
+git commit -m "커밋 메시지"
+커밋 메시지는 내가 어떤 것을 수정하거나 만든 것인지를 적어두면 좋음
+나중에 다시 이전으로 돌아갈 수 있음
+커밋을 버전이라고 생각하면 좋음
+-m : 메시지를 적겠다.
+-a : add 후 commit 하겠다는 뜻(단, 새로 만든 파일은 올라가지 않음 기존 파일들의 수정 사항만 add됨.)
+-am도 가능
+
+git push : 로컬저장소에 커밋되어있는 정보를 넘기는 명령어
+git push origin 브랜치명 : 원격저장소의 "브랜치명"에 push하는 명령어 
+
+git pull : 새로운 커밋이 있으면 가져오라는 뜻
+
+git log : 지금까지의 커밋 히스토리를 볼 수 있는 명령어
+
+git checkout AAAAAAA : AAAAAAA에 커밋 히스토리에 있는 커밋아이디 7자리를 복사해 넣으면 그 커밋으로 되돌아갈 수 있음
+
+브랜치
+git branch -M 이름 : 브랜치 이름을 바꾸는 명령어
+-M : 중복 시 덮어 씌움
+-m : 중복이 있으면 동작하지 않음
+git branch : 현재 브랜치 이름을 알 수 있음
+
