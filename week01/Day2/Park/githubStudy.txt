@@ -10,7 +10,7 @@ git remote add origin 주소 : 로컬 저장소를 원격 저장소와 연결하
 
 git clone 주소 : 원격 저장소 정보를 복사해오겠다.
 
-git add .
+git add . : 스테이징 시키는 것.
 . => 전부 다 라는 뜻
 git add 파일명
 
@@ -24,16 +24,77 @@ git commit -m "커밋 메시지"
 
 git push : 로컬저장소에 커밋되어있는 정보를 넘기는 명령어
 git push origin 브랜치명 : 원격저장소의 "브랜치명"에 push하는 명령어 
+git push --force : 강제 푸시
 
 git pull : 새로운 커밋이 있으면 가져오라는 뜻
 
 git log : 지금까지의 커밋 히스토리를 볼 수 있는 명령어
+git log --oneline : 한줄로 보여줌
 
-git checkout AAAAAAA : AAAAAAA에 커밋 히스토리에 있는 커밋아이디 7자리를 복사해 넣으면 그 커밋으로 되돌아갈 수 있음
+git checkout AAAAAAA : AAAAAAA에 커밋 히스토리에 있는 커밋아이디 7자리를 복사해 넣으면 그 커밋으로 되돌아갈 수 있음(단, 가능한 사용하지 말 것)
 
-브랜치
+git status : git 저장소 상태 파악
+-s 짧게 나옴
+
+git config  ~~~~~~ : git의 옵션 설정
+
+git fetch 원격저장소 브랜치이름 : 원격저장소의 정보를 가져옴(가져오기만함 merge 나 rebase는 하지 않음)
+
+git help 명령어 : 명령어의 도움말을 들을 수 있음
+
+git merge 브랜치 : 브랜치에 있는 커밋을 현재 브랜치와 머지함
+
+git reset 파일명 : 스테이징 된 특정 파일을 언스테이징 함 
+git reset --hard 체크섬 : 현재브랜치를 특정 커밋으로 되돌림
+체크섬에는 7자리 글자가 들어가야 하지만  HEAD~num으로 num 이전의 커밋으로 되돌릴 수 있음
+
+git remote -v : 원격저장소 목록을 확인함
+
+git rebase 브랜치1 : 현재 브랜치의 커밋들을 브랜치1에 병합
+
+git tag -a -m 메시지 태그이름 브랜치명
+(브랜치명은 생략 가능하나 그러면 헤드브랜치가 자동으로 설정됨
+
+branch
+브랜치는 커밋을 가리키는 포인터
 git branch -M 이름 : 브랜치 이름을 바꾸는 명령어
 -M : 중복 시 덮어 씌움
 -m : 중복이 있으면 동작하지 않음
 git branch : 현재 브랜치 이름을 알 수 있음
+-v : 마지막 커밋도 함께 보여줌
+
+git switch 브랜치1 : 브랜치 변경
+
+merge
+브랜치와 브랜치 합치기
+
+tag
+커밋에 이름을 붙여주는 것 - 릴리즈 등 버전 관리에 사용
+브랜치와 마찬가지로 하나의 포인터
+
+fork
+원본을 복사해서 새로운 reporitory로 만들기.
+이후 pull request로 merge할 수 있음
+
+rebase
+커밋 순서 조작하기(강제 push 필요)
+
+amend
+커밋 수정, 커밋 메시지 수정하기
+
+cherrypick
+커밋 하나만 떼오기
+
+reset
+과거 커밋으로 브랜치 되돌리기(이력 삭제)
+
+revert
+과거 커밋을 새로운 커밋으로 다시 만들기
+
+stash
+특정 상태 임시 저장
+하던 작업 중단 후 다른 커밋에서 먼저 작업해야할 때 사용
+
+
+
 
