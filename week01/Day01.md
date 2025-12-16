@@ -1,4 +1,4 @@
-# Week 01 – Session 01  
+# Week 01 – Day 01
 ## C99 → C++ 사고방식 리마인드
 
 ---
