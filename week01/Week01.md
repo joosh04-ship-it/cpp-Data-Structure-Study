@@ -18,8 +18,16 @@
 
 ---
 ## Day 03
-### Class의 완성
+### Class의 완성 - 1
 
 - 정보은닉과 캡슐화 개념 확립
 - class 생성자와 소멸자 구현
 - class 배열과 this 포인터의 이해
+
+---
+## Day 04
+### Class의 완성 - 2
+
+- 복사 생성자의 역할
+- friend 키워드의 개념
+- static 멤버 변수와 static 멤버 함수
